@@ -14,7 +14,8 @@
     "description": { "default": "Webpart to show image slide show" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "height": "400px"
+      "height": "400px",
+      "width": "100%"
     }
   }]
 }

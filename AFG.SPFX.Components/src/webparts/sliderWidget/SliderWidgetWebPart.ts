@@ -16,6 +16,7 @@ export interface ISliderWidgetWebPartProps {
   context: any;
   listName: string;
   height: string;
+  width: string;
 }
 
 export default class SliderWidgetWebPart extends BaseClientSideWebPart<ISliderWidgetWebPartProps> {
@@ -34,7 +35,8 @@ export default class SliderWidgetWebPart extends BaseClientSideWebPart<ISliderWi
       {
         context: this.context,
         listName: this.properties.listName,
-        height: this.properties.height
+        height: this.properties.height,
+        width: this.properties.width
       }
     );
 
@@ -66,6 +68,9 @@ export default class SliderWidgetWebPart extends BaseClientSideWebPart<ISliderWi
                 }),
                 PropertyPaneTextField('height', {
                   label: strings.HeightFieldLabel
+                }),
+                PropertyPaneTextField('width', {
+                  label: strings.WidthFieldLabel
                 }),
               ]
             }

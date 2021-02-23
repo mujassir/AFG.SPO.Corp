@@ -4,6 +4,7 @@ define([], function() {
     "BasicGroupName": "Configurations",
     "TitleFieldLabel": "Webpart Title",
     "ListNameFieldLabel": "List Name",
-    "HeightFieldLabel": "Height"
+    "HeightFieldLabel": "Height",
+    "WidthFieldLabel":"Width",
   }
 });

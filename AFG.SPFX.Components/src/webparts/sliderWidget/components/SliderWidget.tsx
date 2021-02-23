@@ -51,7 +51,7 @@ export default class SliderWidget extends React.Component<ISliderWidgetProps, {}
         isLoading: false,
         sliderImages: carouselEvements
       }, () => {
-        this.setWidgetHeight();
+        this.setWidgetHeightWidth();
       });
     } catch (error) {
       this.setState({
@@ -94,7 +94,7 @@ export default class SliderWidget extends React.Component<ISliderWidgetProps, {}
 
   private renderWidgetSlider() {
     return (
-      <div className={styles.sliderWidget}  >
+      <div className={styles.sliderWidget} style={{ margin: 'auto',width: this.getWidgetWidth()}} >
         {this.state.sliderImages
           ?
           <Carousel
@@ -136,9 +136,12 @@ export default class SliderWidget extends React.Component<ISliderWidgetProps, {}
   private getWidgetHeight() {
     return this.props.height || Constants.Defaults.SliderWidget.height;
   }
-  private setWidgetHeight() {
+  private getWidgetWidth() {
+    return this.props.width || Constants.Defaults.SliderWidget.width;
+  }
+  private setWidgetHeightWidth() {
     let element = document.getElementsByClassName(styles.carouselImageContent);
-    element[0].setAttribute("style", "height: " + this.getWidgetHeight());
+    element[0].setAttribute("style", `height: ${this.getWidgetHeight()}`);
   }
 
   private renderPlaceHolder() {

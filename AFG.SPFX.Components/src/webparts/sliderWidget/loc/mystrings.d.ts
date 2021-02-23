@@ -4,6 +4,7 @@ declare interface ISliderWidgetWebPartStrings {
   TitleFieldLabel: string;
   ListNameFieldLabel: string;
   HeightFieldLabel: string;
+  WidthFieldLabel: string;
 }
 
 declare module 'SliderWidgetWebPartStrings' {
