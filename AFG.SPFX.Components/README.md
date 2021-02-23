@@ -1,4 +1,4 @@
-# afg-spfx-components
+# AFG SPFx Components
 
 ## Summary
 
