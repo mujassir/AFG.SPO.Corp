@@ -16,8 +16,8 @@ export default class ListDataManager {
     let results: ISliderImage[] = items.map((p: any) => {
       return {
         Title: p.Title,
-        ImageURL: p.ImageURL,
-        Target: p.Target,
+        ImageURL: p.FileRef, // p.ImageURL,
+        Target: p.Target ? p.Target["URL"] : "", // p.Target,
         DisplayOrder: p.DisplayOrder
       };
     });
